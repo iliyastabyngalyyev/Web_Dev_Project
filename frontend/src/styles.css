@@ -1,0 +1,159 @@
+@import 'leaflet/dist/leaflet.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f7fb;
+  color: #1d2433;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #102542, #1d7a85);
+}
+
+.auth-card, .form-card, .info-card, .trip-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.auth-card {
+  width: 380px;
+  padding: 32px;
+}
+
+.auth-card h1 {
+  margin: 0 0 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, button {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d4d9e2;
+  font-size: 16px;
+}
+
+button {
+  background: #0f62fe;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary, .logout, .delete-btn {
+  background: #e9eefb;
+  color: #0f62fe;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.form-card {
+  padding: 24px;
+}
+
+.info-card {
+  overflow: hidden;
+}
+
+.info-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.info-content {
+  padding: 20px;
+}
+
+.section-title {
+  margin: 28px 0 16px;
+}
+
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  overflow: hidden;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.trip-body {
+  padding: 18px;
+}
+
+.trip-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.message {
+  margin-top: 12px;
+  color: #0f62fe;
+}
+
+.empty {
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+}
+
+@media (max-width: 900px) {
+  .planner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
